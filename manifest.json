@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "GIF Saver",
+  "version": "1.0",
+  "description": "GIF Saver is a handy browser extension designed to enhance your web browsing experience by allowing you to seamlessly save GIF images directly to your computer. Say goodbye to .webp format, let's download GIF images as .gif format",
+  "permissions": ["activeTab", "contextMenus", "downloads"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "48": "icon.png"
+    }
+  },
+  "icons": {
+    "48": "icon.png"
+  }
+}
